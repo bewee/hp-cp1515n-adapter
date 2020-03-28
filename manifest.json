@@ -1,0 +1,59 @@
+{
+  "author": "Galveston01",
+  "description": "HP CP1515n printer support",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "primary_type": "adapter",
+      "strict_max_version": "*",
+      "strict_min_version": "0.10.0"
+    }
+  },
+  "homepage_url": "https://github.com/Galveston01/hp-cp1515n-adapter",
+  "id": "hp-cp1515n-adapter",
+  "license": "GPL-3.0",
+  "manifest_version": 1,
+  "name": "HP CP1515n printer",
+  "short_name": "Printer",
+  "version": "0.1.0",
+  "web_accessible_resources": [
+    "js/*.js"
+  ],
+
+  "options": {
+    "default": {
+      "pollInterval": 14400,
+      "devices": []
+    },
+    "schema": {
+      "type": "object",
+      "required": [
+        "pollInterval",
+        "devices"
+      ],
+      "properties": {
+        "pollInterval": {
+          "title": "Interval in seconds that defines how often to update values",
+          "type": "integer"
+        },
+        "devices": {
+          "title": "Devices",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "ip": {
+                "title": "IP-Address",
+                "type": "string"
+              },
+              "name": {
+                "title": "Name",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
