@@ -12,8 +12,7 @@
     "mozilla",
     "iot",
     "adapter",
-    "web",
-    "url"
+    "printer"
   ],
   "homepage": "https://github.com/Galveston01/hp-cp1515n-adapter",
   "license": "GPL-3.0",
